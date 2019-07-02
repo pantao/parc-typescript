@@ -159,3 +159,50 @@ export const eachCall = (object: any, fn: Function): void => {
     }
   }
 };
+
+/**
+ * 生成指定长度的随机 Pin 码
+ *
+ * @param length Pin 长度
+ */
+export const generatePinNumber = (length = 4): string => {
+  const buffer = new Uint32Array([1]);
+  crypto.getRandomValues(buffer);
+  const pin = String(buffer[0]).substring(0, length);
+
+  let sameCount = 0;
+  let seqCount = 0;
+  let curDigit;
+  let lastDigit;
+  for (var i = 0; i < pin.length; i += 1) {
+    curDigit = pin[i];
+
+    if (curDigit === lastDigit) {
+      sameCount += 1;
+    } else {
+      sameCount = 0;
+    }
+
+    if (Number(curDigit) === Number(lastDigit) + 1) {
+      seqCount += 1;
+    } else {
+      seqCount = 0;
+    }
+
+    if (seqCount === 2 || sameCount === 2) {
+      return generatePinNumber();
+    }
+    lastDigit = curDigit;
+  }
+
+  return pin;
+};
+
+/**
+ * 在区间中生成随机值
+ *
+ * @param min 最小值
+ * @param max 最大值
+ */
+export const generateRandomNumberBetween = (min: number, max: number): number =>
+  Math.floor(Math.random() * (max - min)) + min;

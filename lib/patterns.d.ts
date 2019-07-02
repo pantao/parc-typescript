@@ -1,3 +1,7 @@
+export declare const EMAIL: RegExp;
+export declare const URL: RegExp;
+export declare const CC: RegExp;
+export declare const URL_SAFE: RegExp;
 export declare const MOBILE_LOOSE: RegExp;
 export declare const MOBILE_STRICT: RegExp;
 /**

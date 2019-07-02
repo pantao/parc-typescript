@@ -1,5 +1,23 @@
 export declare type IsFunction = (value: any, ...options: any) => boolean;
 /**
+ * 检测一个值是否为邮箱地址
+ *
+ * @param value 待检测的值
+ */
+export declare const email: (value: any) => boolean;
+/**
+ * 检测一个值是否为URL地址
+ *
+ * @param value 待检测的值
+ */
+export declare const url: (value: any) => boolean;
+/**
+ * 检测一个值是否为 URL 安全的
+ *
+ * @param value 待检测的值
+ */
+export declare const urlSafe: (value: any) => boolean;
+/**
  * 检测一个字符串是否为手机号
  *
  * @param {String} value 待检测的值

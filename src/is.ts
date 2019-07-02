@@ -5,6 +5,27 @@ export type IsFunction = (value: any, ...options: any) => boolean;
 const { toString } = Object.prototype;
 
 /**
+ * 检测一个值是否为邮箱地址
+ *
+ * @param value 待检测的值
+ */
+export const email = (value: any): boolean => patterns.EMAIL.test(value);
+
+/**
+ * 检测一个值是否为URL地址
+ *
+ * @param value 待检测的值
+ */
+export const url = (value: any): boolean => patterns.URL.test(value);
+
+/**
+ * 检测一个值是否为 URL 安全的
+ *
+ * @param value 待检测的值
+ */
+export const urlSafe = (value: any): boolean => patterns.URL_SAFE.test(value);
+
+/**
  * 检测一个字符串是否为手机号
  *
  * @param {String} value 待检测的值
