@@ -10,6 +10,7 @@ import * as to from "./to";
 import * as datetime from "./datetime";
 import * as version from "./version";
 import * as func from "./func";
+import * as random from "./random";
 
 import luhn from "./luhn";
 
@@ -31,7 +32,8 @@ export {
   version,
   UrlTemplate,
   Currency,
-  func
+  func,
+  random
 };
 
 export default {
@@ -49,5 +51,6 @@ export default {
   version,
   UrlTemplate,
   Currency,
-  func
+  func,
+  random
 };

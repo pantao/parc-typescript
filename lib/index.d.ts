@@ -10,10 +10,11 @@ import * as to from "./to";
 import * as datetime from "./datetime";
 import * as version from "./version";
 import * as func from "./func";
+import * as random from "./random";
 import luhn from "./luhn";
 import UrlTemplate from "./UrlTemplate";
 import Currency from "./Currency";
-export { formatters, is, to, datetime, object, base64, constants, patterns, utils, validators, luhn, version, UrlTemplate, Currency, func };
+export { formatters, is, to, datetime, object, base64, constants, patterns, utils, validators, luhn, version, UrlTemplate, Currency, func, random };
 declare const _default: {
     formatters: typeof formatters;
     is: typeof is;
@@ -33,6 +34,7 @@ declare const _default: {
     UrlTemplate: typeof UrlTemplate;
     Currency: typeof Currency;
     func: typeof func;
+    random: typeof random;
 };
 export default _default;
 //# sourceMappingURL=index.d.ts.map
