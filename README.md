@@ -2,17 +2,38 @@
 
 Parc functions set is a util functions library wrote with typescript.
 
+## Features
+
+This package includes these features:
+
+- `formatters`
+- `is` value guesser
+- `to` value convertor
+- `datetime` datetime value utilities
+- `object` object value utilities
+- `base64` base64 utilities
+- `patterns` common regexp patterns
+- `utils` common utilities
+- `validators` validators
+- `luhn` luhn algorithm
+- `version` version number utilities
+- `UrlTemplate` templated url builder
+- `Currency` currency builder
+- `func` funciton concerned utilities
+- `random` random concerned utilities
+- `geometry` geometry concerned utilities
+
 ## Usage
 
 ```js
 import parc from "parc";
 
-doggy.is.mobile("13456788675");
+parc.is.mobile("13456788675");
 
-doggy.object.deepEqual(foo, bar);
+parc.object.deepEqual(foo, bar);
 
-doggy.base64.encode("btoa");
+parc.base64.encode("btoa");
 
 // Chinese mobile number check
-doggy.patterns.MOBILE.test("13432343234");
+parc.patterns.MOBILE.test("13432343234");
 ```

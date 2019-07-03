@@ -11,6 +11,7 @@ import * as datetime from "./datetime";
 import * as version from "./version";
 import * as func from "./func";
 import * as random from "./random";
+import * as geometry from "./geometry";
 
 import luhn from "./luhn";
 
@@ -33,7 +34,8 @@ export {
   UrlTemplate,
   Currency,
   func,
-  random
+  random,
+  geometry
 };
 
 export default {
@@ -52,5 +54,6 @@ export default {
   UrlTemplate,
   Currency,
   func,
-  random
+  random,
+  geometry
 };
